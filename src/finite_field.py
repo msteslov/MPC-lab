@@ -15,7 +15,7 @@ def inv(a: int, p: int) -> int:
 
 
 def div(a: int, b: int, p: int) -> int:
-    return mul(a, inv(b, p))
+    return mul(a, inv(b, p), p)
 
 
 def is_prime(p: int) -> bool:
