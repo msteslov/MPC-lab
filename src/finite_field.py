@@ -15,11 +15,18 @@ def inv(a: int, p: int) -> int:
 
 
 def div(a: int, b: int, p: int) -> int:
-    return mul(a, inv(b, p)) % p
+    return mul(a, inv(b, p))
 
 
 def is_prime(p: int) -> bool:
-    pass
+    if p == 2:
+        return True
+    if p < 2 or not (p % 2):
+        return False
+    for i in range(3, int(p**0.5) + 1, 2):
+        if not (p % i):
+            return False
+    return True
 
 
 def normalize(a: int, p: int) -> int:
