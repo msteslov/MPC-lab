@@ -2,7 +2,9 @@
 
 MPC-lab is a small educational Python project that implements core building blocks of secure multi-party computation (MPC) from scratch.
 
-The project focuses on the mechanics behind secret sharing and secure arithmetic rather than production-grade cryptography. It is intended as a readable lab for understanding how private values can be split into shares, processed, and reconstructed only when the protocol allows it.
+The project focuses on the mechanics behind secret sharing and arithmetic over secret-shared values rather than production-grade cryptography. It is intended as a readable lab for understanding how private values can be split into shares, processed, and reconstructed only when the protocol allows it.
+
+The implementation assumes a semi-honest setting and is intended for educational experiments only.
 
 ## Features
 
@@ -11,6 +13,7 @@ The project focuses on the mechanics behind secret sharing and secure arithmetic
 - Shamir secret sharing with Lagrange interpolation
 - Beaver triples for multiplication of additively shared values
 - Secure aggregation demo for sum and average computation
+- Unit tests for core primitives
 
 ## Project Structure
 
@@ -90,4 +93,4 @@ PYTHONPATH=src python3 -m pytest
 
 ## Notes
 
-This repository is for learning and experimentation. It does not implement network communication, malicious-party security, authenticated shares, or production cryptographic hardening.
+This repository is for learning and experimentation. It does not implement network communication, malicious-party security, authenticated shares, constant-time implementations, secure randomness, or production-ready parameter selection.
